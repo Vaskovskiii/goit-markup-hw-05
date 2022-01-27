@@ -81,6 +81,7 @@ font-family: 'Roboto', sans-serif;
 .header-link-studio{
   margin-right: 50px;
   color: #212121;
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -88,6 +89,7 @@ font-family: 'Roboto', sans-serif;
 .header-link-contacts { 
   margin-right: 50px;
   color: #212121;
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -95,16 +97,18 @@ font-family: 'Roboto', sans-serif;
 .header-link { 
   margin-right: 50px;
   color: #212121;
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list .header-link-studio {
+.header-list .current{
   position: relative;
   color: var(--blue-text-colour);
 }
 
-.header-link-studio::after {
+
+.current::after {
   position: absolute;
   content: "";
   display: block;
@@ -115,21 +119,6 @@ font-family: 'Roboto', sans-serif;
   background-color: var(--blue-text-colour);
 }
 
-.header-list .header-link {
-  position: relative;
-  color: var(--blue-text-colour);
-}
-
-.header-link::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  margin-top: 28px;
-  background-color: var(--blue-text-colour);
-}
 
 
 
@@ -151,6 +140,7 @@ font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   height: 100%;
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -165,6 +155,7 @@ font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   height: 100%;
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -247,7 +238,7 @@ font-family: 'Roboto', sans-serif;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background: #2196F3;
-  transition: color 250ms, background-color 250ms;
+  transition: color 250ms;
 }
 
 .solution-btn:hover,
@@ -445,7 +436,7 @@ color: #FFFFFF;
   justify-content: center;
   align-items: center;
   fill: #afb1b8;;
-  
+  transition: color 250ms, background-color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -473,8 +464,6 @@ color: #FFFFFF;
   height: 92px;
   }
 
-
-
 .clients-social-link {
   width: 100%;
   height: 100%;
@@ -486,22 +475,28 @@ color: #FFFFFF;
   cursor: pointer;
   fill: #afb1b8;
   color: var(--blue-text-colour);
+  outline: rgba(33, 150, 243, 0.9);
+  transition: color 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-social-link:hover,
-.clients--social-link:focus {
+.clients-social-link:focus {
   fill: currentColor;
   border-color: var(--blue-text-colour);
 }
 
 
 
+.clients-social-link:hover .clients-social-icon
+.clients-social-link:focus .clients-social-icon {
+  fill: var(--blue-text-colour);
+}
+
 .clients-social-list{
   display: flex;
   justify-content: space-between;
-
 }
 
 .clients-title {
@@ -517,30 +512,15 @@ color: #212121;
   
 }
 
-
-
-.clients-social-icon:focus,
-.clients-social-icon:hover {
-  fill: var(--blue-text-colour);
-}
-
 .clients-social-conteiner {
   width: 170px;
   height: 92px;
+  transition: color 250ms;
 }
-
-.clients-social-conteiner:hover,
-.clients-social-conteiner:focus {
-  border-color: var(--blue-text-colour);
-}
-
 
 .clients-social-item + .clients-social-item {
   margin-left: 30px;
 }
-
-
-
 
 /*------------footer-------------*/
 
@@ -647,6 +627,7 @@ color: #212121;
       background: rgba(255, 255, 255, 0.1);
       fill: #FFFFFF;
       color: #FFFFFF;
+      transition: color 250ms;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -722,7 +703,7 @@ color: #212121;
 
   background: #F5F4FA;
   border-radius: 4px;
-  transition: color 300ms, background-color 300ms;
+  transition: color 250ms, background-color 250ms;
 }
 
 .portfolio-btn:hover,
