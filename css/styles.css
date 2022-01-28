@@ -201,7 +201,6 @@ font-family: 'Roboto', sans-serif;
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imgsolution.jpg);
- 
   background-position: center;
 }
 
@@ -340,10 +339,10 @@ position: absolute;
 bottom: 0;
 width: 100%;
 font-size: 14px;
-line-height: 16px;
+line-height: calc(16 / 14);
 text-align: center;
-letter-spacing: 0.03em;
-
+/*letter-spacing: 0.03em;*/
+text-transform: uppercase;
 
 padding-left: 86px;
 padding-right: 86px;
@@ -436,10 +435,11 @@ color: #FFFFFF;
   justify-content: center;
   align-items: center;
   fill: #afb1b8;;
-  transition: color 250ms, background-color 250ms;
+  transition: fill 250ms,  background 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 
 
@@ -476,7 +476,7 @@ color: #FFFFFF;
   fill: #afb1b8;
   color: var(--blue-text-colour);
   outline: rgba(33, 150, 243, 0.9);
-  transition: color 250ms;
+  transition: fill 250ms, border 250ms;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -515,7 +515,6 @@ color: #212121;
 .clients-social-conteiner {
   width: 170px;
   height: 92px;
-  transition: color 250ms;
 }
 
 .clients-social-item + .clients-social-item {
@@ -627,7 +626,7 @@ color: #212121;
       background: rgba(255, 255, 255, 0.1);
       fill: #FFFFFF;
       color: #FFFFFF;
-      transition: color 250ms;
+      transition: fill 250ms, background-color 250ms;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
